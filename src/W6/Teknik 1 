@@ -25,3 +25,30 @@ sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
 SELECT last_name, store_id FROM public.customer
 ORDER BY store_id = 1 DESC
 LIMIT 4;
+
+ÖDEV 6
+
+//film tablosunda bulunan rental_rate
+sütunundaki değerlerin ortalaması nedir?
+
+SELECT AVG (rental_rate) FROM public.film
+
+//film tablosunda bulunan filmlerden
+kaç tanesi 'C' karakteri ile başlar?
+
+SELECT COUNT (*) FROM public.film
+WHERE title LIKE 'C%';
+
+//film tablosunda bulunan filmlerden rental_rate değeri
+0.99 a eşit olan en uzun (length) film kaç dakikadır?
+
+SELECT MAX (length) FROM public.film
+WHERE rental_rate = 0.99;
+
+//film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına
+ait kaç farklı replacement_cost değeri vardır?
+
+SELECT COUNT(replacement_cost) FROM public.film
+WHERE length >= 150;
+
+
